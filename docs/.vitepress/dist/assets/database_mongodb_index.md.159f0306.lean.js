@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app.24b40e3b.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"database/mongodb/index.md"}'),o={name:"database/mongodb/index.md"};function n(r,s,d,c,i,p){return a(),t("div")}const f=e(o,[["render",n]]);export{m as __pageData,f as default};
