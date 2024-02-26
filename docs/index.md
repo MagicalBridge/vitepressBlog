@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "褚鹏飞的博客"
+  # text: "A VitePress Site"
+  tagline: 定投改变命运
   actions:
     - theme: brand
       text: Markdown Examples
