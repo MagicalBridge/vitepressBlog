@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "myBlog"
-  text: "new Blog"
+  name: "My Awesome Project"
+  text: "A VitePress Site"
   tagline: My great project tagline
   actions:
     - theme: brand
