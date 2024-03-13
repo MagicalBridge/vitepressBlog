@@ -9,9 +9,10 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { 
-        text: '算法',
+        text: '算法题解',
         items: [
-          { text: 'LeetCode', link: '/leetcode/leetcode/index.md' },
+          { text: 'LeetCode算法题解', link: '/leetcode/leetcode/index.md' },
+          { text: '牛客算法题解', link: '/leetcode/niuke/index.md' },
         ]
       }
     ],
