@@ -89,7 +89,7 @@ export default defineConfig({
               items:[
                 {
                   text: '认识jsx', 
-                  link: '/react/react-advance/认识jsx.md',
+                  link: '/react/react-advance/认识jsx',
                 }
               ]
             },
@@ -111,19 +111,38 @@ export default defineConfig({
         {
           text: 'Vue3框架学习',
           collapsed: false,
-          // items: [
-          //   { 
-          //     text: 'React进阶', 
-          //     link: '/react/index',
-          //     collapsed: false,
-          //     items:[
-          //       {
-          //         text: '认识jsx', 
-          //         link: '/react/react-advance/认识jsx.md',
-          //       }
-          //     ]
-          //   },
-          // ]
+          items: [
+            { 
+              text: 'Vue3框架介绍', 
+              link: '',
+              collapsed: false,
+              items:[
+                {
+                  text: 'Vue3整体架构', 
+                  link: '/vue3/01.introduce',
+                },
+                {
+                  text: 'Vue3开发环境搭建', 
+                  link: '/vue3/02.start',
+                }
+              ]
+            },
+            { 
+              text: 'Vue3响应式原理', 
+              link: '',
+              collapsed: false,
+              items:[
+                {
+                  text: 'test1', 
+                  link: '/vue3/01.introduce',
+                },
+                {
+                  text: 'test2', 
+                  link: '/vue3/02.start',
+                }
+              ]
+            },
+          ]
         }
       ],
       "/vue2/":[
@@ -178,5 +197,8 @@ export default defineConfig({
         link: '' 
       }
     ]
+  },
+  markdown: {
+    lineNumbers: true
   }
 })
