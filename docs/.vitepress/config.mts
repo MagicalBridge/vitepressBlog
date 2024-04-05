@@ -5,7 +5,9 @@ export default defineConfig({
   title: "褚鹏飞的博客",
   description: "用注意力填满 1000 小时就能练成任何你需要的技能……",
   base: '/vitepressBlog/',
-  
+  head: [
+    ["link", { rel: "icon", href: "/images/clock.svg" }],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -20,7 +22,6 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
-
     sidebar: {
       "/": [
         {
@@ -37,8 +38,16 @@ export default defineConfig({
                   link: '/algorithm/leetcode/1.两数之和.md',
                 },
                 {
+                  text: '2.两数相加', 
+                  link: '/algorithm/leetcode/2.两数相加.md',
+                },
+                {
                   text: '3.无重复字符的最长子串', 
                   link: '/algorithm/leetcode/3.无重复字符的最长子串.md',
+                },
+                {
+                  text: '4.寻找两个正序数组的中位数', 
+                  link: '/algorithm/leetcode/4.寻找两个正序数组的中位数.md',
                 },
                 {
                   text: '5.最长回文子串', 
@@ -46,10 +55,104 @@ export default defineConfig({
                 }
               ]
             },
-            { text: '牛客网算法题解', link: '/' }
+            { 
+              text: '牛客网算法题解', 
+              link: '/algorithm/index',
+              collapsed: false,
+              // items:[
+              //   {
+              //     text: '1.两数之和', 
+              //     link: '/algorithm/leetcode/1.两数之和.md',
+              //   },
+              //   {
+              //     text: '3.无重复字符的最长子串', 
+              //     link: '/algorithm/leetcode/3.无重复字符的最长子串.md',
+              //   },
+              //   {
+              //     text: '5.最长回文子串', 
+              //     link: '/algorithm/leetcode/5.最长回文子串.md',
+              //   }
+              // ]
+            }
           ]
         }
       ],
+      "/react/":[
+        {
+          text: 'React框架学习',
+          collapsed: false,
+          items: [
+            { 
+              text: 'React进阶', 
+              link: '/react/index',
+              collapsed: false,
+              items:[
+                {
+                  text: '认识jsx', 
+                  link: '/react/react-advance/认识jsx.md',
+                }
+              ]
+            },
+          ]
+        }
+      ],
+      "/vue3/":[
+        {
+          text: 'Vue3框架学习',
+          collapsed: false,
+          // items: [
+          //   { 
+          //     text: 'React进阶', 
+          //     link: '/react/index',
+          //     collapsed: false,
+          //     items:[
+          //       {
+          //         text: '认识jsx', 
+          //         link: '/react/react-advance/认识jsx.md',
+          //       }
+          //     ]
+          //   },
+          // ]
+        }
+      ],
+      "/vue2/":[
+        {
+          text: 'Vue2框架学习',
+          collapsed: false,
+          // items: [
+          //   { 
+          //     text: 'React进阶', 
+          //     link: '/react/index',
+          //     collapsed: false,
+          //     items:[
+          //       {
+          //         text: '认识jsx', 
+          //         link: '/react/react-advance/认识jsx.md',
+          //       }
+          //     ]
+          //   },
+          // ]
+        }
+      ],
+      "/front-end-engineering/": [
+        {
+          text: '前端工程化',
+          collapsed: false,
+          items: [
+            { 
+              text: 'Babel', 
+              link: '/front-end-engineering/babel/index',
+              collapsed: false,
+              // items:[
+              //   {
+              //     text: '认识jsx', 
+              //     link: '/react/react-advance/认识jsx.md',
+              //   }
+              // ]
+            },
+          ]
+        }
+      ]
     },
 
     socialLinks: [

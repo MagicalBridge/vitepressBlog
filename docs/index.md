@@ -8,8 +8,17 @@ hero:
   tagline: 持续努力的能力，才是真正的才华 - 羽生善治
   actions:
     - theme: brand 
-      text: 算法学习
+      text: 算法相关
       link: /algorithm/index
+    - theme: brand 
+      text: React框架相关
+      link: /react/index
+    - theme: brand 
+      text: Vue3框架相关
+      link: /vue3/index
+    - theme: brand 
+      text: 前端工程化相关
+      link: /front-end-engineering/index
     # - theme: alt
     #   text: API Examples
     #   link: /api-examples
