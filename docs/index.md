@@ -11,11 +11,17 @@ hero:
       text: 算法相关
       link: /algorithm/index
     - theme: brand 
-      text: React框架相关
+      text: React相关
       link: /react/index
     - theme: brand 
-      text: Vue3框架相关
+      text: Vue3相关
       link: /vue3/index
+    - theme: brand 
+      text: Vue2相关
+      link: /vue2/index
+    - theme: brand 
+      text: Node相关
+      link: /node/index
     - theme: brand 
       text: 前端工程化相关
       link: /front-end-engineering/index

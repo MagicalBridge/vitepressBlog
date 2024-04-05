@@ -30,7 +30,7 @@ export default defineConfig({
           items: [
             { 
               text: 'LeetCode算法题解', 
-              link: '/algorithm/index',
+              link: '',
               collapsed: false,
               items:[
                 {
@@ -57,7 +57,7 @@ export default defineConfig({
             },
             { 
               text: '牛客网算法题解', 
-              link: '/algorithm/index',
+              link: '',
               collapsed: false,
               // items:[
               //   {
@@ -84,12 +84,23 @@ export default defineConfig({
           items: [
             { 
               text: 'React进阶', 
-              link: '/react/index',
+              link: '',
               collapsed: false,
               items:[
                 {
                   text: '认识jsx', 
                   link: '/react/react-advance/认识jsx.md',
+                }
+              ]
+            },
+            { 
+              text: 'React Hooks', 
+              link: '',
+              collapsed: false,
+              items:[
+                {
+                  text: 'React组件的通信强化方式', 
+                  link: '/react/react-hooks/React组件的通信强化方式.md',
                 }
               ]
             },
@@ -132,6 +143,12 @@ export default defineConfig({
           //     ]
           //   },
           // ]
+        }
+      ],
+      "/node/":[
+        {
+          text: 'Node.js学习',
+          collapsed: false,
         }
       ],
       "/front-end-engineering/": [
