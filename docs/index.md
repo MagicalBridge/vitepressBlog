@@ -3,16 +3,16 @@
 layout: home
 
 hero:
-  name: "褚鹏飞的博客"
-  # text: "A VitePress Site"
-  tagline: 定投改变命运
-#   actions:
-#     - theme: brand
-#       text: Markdown Examples
-#       link: /markdown-examples
-#     - theme: alt
-#       text: API Examples
-#       link: /api-examples
+  name: "定投改变命运"
+  text: "用你的注意力填满一千小时就能练成任何你所需要的技能……"
+  tagline: 持续努力的能力，才是真正的才华 - 羽生善治
+  actions:
+    - theme: brand 
+      text: 算法学习
+      link: /algorithm/index
+    # - theme: alt
+    #   text: API Examples
+    #   link: /api-examples
 
 # features:
 #   - title: Feature A

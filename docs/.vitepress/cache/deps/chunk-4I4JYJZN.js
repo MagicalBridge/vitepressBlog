@@ -33,9 +33,9 @@ import {
   version,
   watch,
   watchEffect
-} from "./chunk-G7P6XGB7.js";
+} from "./chunk-CKQ4TNQ3.js";
 
-// node_modules/@vueuse/shared/node_modules/vue-demi/lib/index.mjs
+// node_modules/vitepress/lib/vue-demi.mjs
 var isVue2 = false;
 var isVue3 = true;
 function set(target, key, val) {
@@ -46,6 +46,13 @@ function set(target, key, val) {
   }
   target[key] = val;
   return val;
+}
+function del(target, key) {
+  if (Array.isArray(target)) {
+    target.splice(key, 1);
+    return;
+  }
+  delete target[key];
 }
 
 // node_modules/@vueuse/shared/index.mjs
@@ -71,7 +78,7 @@ function computedWithControl(source, fn) {
   };
   watch(source, update, { flush: "sync" });
   const get2 = typeof fn === "function" ? fn : fn.get;
-  const set4 = typeof fn === "function" ? void 0 : fn.set;
+  const set3 = typeof fn === "function" ? void 0 : fn.set;
   const result = customRef((_track, _trigger) => {
     track = _track;
     trigger = _trigger;
@@ -85,7 +92,7 @@ function computedWithControl(source, fn) {
         return v;
       },
       set(v2) {
-        set4 == null ? void 0 : set4(v2);
+        set3 == null ? void 0 : set3(v2);
       }
     };
   });
@@ -630,7 +637,7 @@ function refWithControl(initial, options = {}) {
         return get2();
       },
       set(v) {
-        set4(v);
+        set3(v);
       }
     };
   });
@@ -639,7 +646,7 @@ function refWithControl(initial, options = {}) {
       track();
     return source;
   }
-  function set4(value, triggering = true) {
+  function set3(value, triggering = true) {
     var _a, _b;
     if (value === source)
       return;
@@ -652,14 +659,14 @@ function refWithControl(initial, options = {}) {
       trigger();
   }
   const untrackedGet = () => get2(false);
-  const silentSet = (v) => set4(v, false);
+  const silentSet = (v) => set3(v, false);
   const peek = () => get2(false);
-  const lay = (v) => set4(v, false);
+  const lay = (v) => set3(v, false);
   return extendRef(
     ref2,
     {
       get: get2,
-      set: set4,
+      set: set3,
       untrackedGet,
       silentSet,
       peek,
@@ -1049,12 +1056,12 @@ function useCounter(initialValue = 0, options = {}) {
   const inc = (delta = 1) => count.value = Math.max(Math.min(max, count.value + delta), min);
   const dec = (delta = 1) => count.value = Math.min(Math.max(min, count.value - delta), max);
   const get2 = () => count.value;
-  const set4 = (val) => count.value = Math.max(min, Math.min(max, val));
+  const set3 = (val) => count.value = Math.max(min, Math.min(max, val));
   const reset = (val = _initialValue) => {
     _initialValue = val;
-    return set4(val);
+    return set3(val);
   };
-  return { count, inc, dec, get: get2, set: set4, reset };
+  return { count, inc, dec, get: get2, set: set3, reset };
 }
 var REGEX_PARSE = /^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[Tt\s]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?[.:]?(\d+)?$/;
 var REGEX_FORMAT = /[YMDHhms]o|\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a{1,2}|A{1,2}|m{1,2}|s{1,2}|Z{1,2}|SSS/g;
@@ -1527,34 +1534,21 @@ function getOldValue(source) {
   return Array.isArray(source) ? source.map(() => void 0) : void 0;
 }
 function whenever(source, cb, options) {
-  return watch(
+  const stop = watch(
     source,
     (v, ov, onInvalidate) => {
-      if (v)
+      if (v) {
+        if (options == null ? void 0 : options.once)
+          nextTick(() => stop());
         cb(v, ov, onInvalidate);
+      }
     },
-    options
+    {
+      ...options,
+      once: false
+    }
   );
-}
-
-// node_modules/@vueuse/core/node_modules/vue-demi/lib/index.mjs
-var isVue22 = false;
-var isVue32 = true;
-function set3(target, key, val) {
-  if (Array.isArray(target)) {
-    target.length = Math.max(target.length, key);
-    target.splice(key, 1, val);
-    return val;
-  }
-  target[key] = val;
-  return val;
-}
-function del(target, key) {
-  if (Array.isArray(target)) {
-    target.splice(key, 1);
-    return;
-  }
-  delete target[key];
+  return stop;
 }
 
 // node_modules/@vueuse/core/index.mjs
@@ -1631,7 +1625,7 @@ function computedInject(key, options, defaultSource, treatDefaultAsFactory) {
   }
 }
 function createReusableTemplate(options = {}) {
-  if (!isVue32 && !version.startsWith("2.7.")) {
+  if (!isVue3 && !version.startsWith("2.7.")) {
     if (true)
       throw new Error("[VueUse] createReusableTemplate only works in Vue 2.7 or above.");
     return;
@@ -1671,7 +1665,7 @@ function keysToCamelKebabCase(obj) {
   return newObj;
 }
 function createTemplatePromise(options = {}) {
-  if (!isVue32) {
+  if (!isVue3) {
     if (true)
       throw new Error("[VueUse] createTemplatePromise only works in Vue 3 or above.");
     return;
@@ -2022,18 +2016,19 @@ function useActiveElement(options = {}) {
     }
     return element;
   };
-  const activeElement = computedWithControl(
-    () => null,
-    () => getDeepActiveElement()
-  );
+  const activeElement = ref();
+  const trigger = () => {
+    activeElement.value = getDeepActiveElement();
+  };
   if (window2) {
     useEventListener(window2, "blur", (event) => {
       if (event.relatedTarget !== null)
         return;
-      activeElement.trigger();
+      trigger();
     }, true);
-    useEventListener(window2, "focus", activeElement.trigger, true);
+    useEventListener(window2, "focus", trigger, true);
   }
+  trigger();
   return activeElement;
 }
 function useMounted() {
@@ -2042,7 +2037,7 @@ function useMounted() {
   if (instance) {
     onMounted(() => {
       isMounted.value = true;
-    }, instance);
+    }, isVue2 ? null : instance);
   }
   return isMounted;
 }
@@ -2953,7 +2948,7 @@ function useClipboard(options = {}) {
   const copied = ref(false);
   const timeout = useTimeoutFn(() => copied.value = false, copiedDuring);
   function updateText() {
-    if (isClipboardApiSupported.value && permissionRead.value !== "denied") {
+    if (isClipboardApiSupported.value && isAllowed(permissionRead.value)) {
       navigator.clipboard.readText().then((value) => {
         text.value = value;
       });
@@ -2965,7 +2960,7 @@ function useClipboard(options = {}) {
     useEventListener(["copy", "cut"], updateText);
   async function copy(value = toValue(source)) {
     if (isSupported.value && value != null) {
-      if (isClipboardApiSupported.value && permissionWrite.value !== "denied")
+      if (isClipboardApiSupported.value && isAllowed(permissionWrite.value))
         await navigator.clipboard.writeText(value);
       else
         legacyCopy(value);
@@ -2987,6 +2982,9 @@ function useClipboard(options = {}) {
   function legacyRead() {
     var _a, _b, _c;
     return (_c = (_b = (_a = document == null ? void 0 : document.getSelection) == null ? void 0 : _a.call(document)) == null ? void 0 : _b.toString()) != null ? _c : "";
+  }
+  function isAllowed(status) {
+    return status === "granted" || status === "prompt";
   }
   return {
     isSupported,
@@ -3155,30 +3153,29 @@ function useStorage(key, defaults2, storage, options = {}) {
   }
   if (!initOnMounted)
     update();
-  return data;
+  function dispatchWriteEvent(oldValue, newValue) {
+    if (window2) {
+      window2.dispatchEvent(new CustomEvent(customStorageEventName, {
+        detail: {
+          key,
+          oldValue,
+          newValue,
+          storageArea: storage
+        }
+      }));
+    }
+  }
   function write(v) {
     try {
       const oldValue = storage.getItem(key);
-      const dispatchWriteEvent = (newValue) => {
-        if (window2) {
-          window2.dispatchEvent(new CustomEvent(customStorageEventName, {
-            detail: {
-              key,
-              oldValue,
-              newValue,
-              storageArea: storage
-            }
-          }));
-        }
-      };
       if (v == null) {
-        dispatchWriteEvent(null);
+        dispatchWriteEvent(oldValue, null);
         storage.removeItem(key);
       } else {
         const serialized = serializer.write(v);
         if (oldValue !== serialized) {
           storage.setItem(key, serialized);
-          dispatchWriteEvent(serialized);
+          dispatchWriteEvent(oldValue, serialized);
         }
       }
     } catch (e) {
@@ -3204,9 +3201,6 @@ function useStorage(key, defaults2, storage, options = {}) {
       return serializer.read(rawValue);
     }
   }
-  function updateFromCustomEvent(event) {
-    update(event.detail);
-  }
   function update(event) {
     if (event && event.storageArea !== storage)
       return;
@@ -3229,6 +3223,10 @@ function useStorage(key, defaults2, storage, options = {}) {
         resumeWatch();
     }
   }
+  function updateFromCustomEvent(event) {
+    update(event.detail);
+  }
+  return data;
 }
 function usePreferredDark(options) {
   return useMediaQuery("(prefers-color-scheme: dark)", options);
@@ -3444,10 +3442,10 @@ function useCycleList(list, options) {
       return index2;
     },
     set(v) {
-      set4(v);
+      set3(v);
     }
   });
-  function set4(i) {
+  function set3(i) {
     const targetList = listRef.value;
     const length = targetList.length;
     const index2 = (i % length + length) % length;
@@ -3456,7 +3454,7 @@ function useCycleList(list, options) {
     return value;
   }
   function shift(delta = 1) {
-    return set4(index.value + delta);
+    return set3(index.value + delta);
   }
   function next(n = 1) {
     return shift(n);
@@ -3468,13 +3466,13 @@ function useCycleList(list, options) {
     var _a, _b;
     return (_b = toValue((_a = options == null ? void 0 : options.initialValue) != null ? _a : toValue(list)[0])) != null ? _b : void 0;
   }
-  watch(listRef, () => set4(index.value));
+  watch(listRef, () => set3(index.value));
   return {
     state,
     index,
     next,
     prev,
-    go: set4
+    go: set3
   };
 }
 function useDark(options = {}) {
@@ -5925,7 +5923,7 @@ function getMapVue2Compat() {
   const data = shallowReactive({});
   return {
     get: (key) => data[key],
-    set: (key, value) => set3(data, key, value),
+    set: (key, value) => set(data, key, value),
     has: (key) => hasOwn(data, key),
     delete: (key) => del(data, key),
     clear: () => {
@@ -5939,7 +5937,7 @@ function useMemoize(resolver, options) {
   const initCache = () => {
     if (options == null ? void 0 : options.cache)
       return shallowReactive(options.cache);
-    if (isVue22)
+    if (isVue2)
       return getMapVue2Compat();
     return shallowReactive(/* @__PURE__ */ new Map());
   };
@@ -6868,13 +6866,12 @@ var elInitialOverflow = /* @__PURE__ */ new WeakMap();
 function useScrollLock(element, initialState = false) {
   const isLocked = ref(initialState);
   let stopTouchMoveListener = null;
-  let initialOverflow;
   watch(toRef2(element), (el) => {
     const target = resolveElement(toValue(el));
     if (target) {
       const ele = target;
       if (!elInitialOverflow.get(ele))
-        elInitialOverflow.set(ele, initialOverflow);
+        elInitialOverflow.set(ele, ele.style.overflow);
       if (isLocked.value)
         ele.style.overflow = "hidden";
     }
@@ -8054,7 +8051,7 @@ function useVModel(props, key, emit, options = {}) {
   const _emit = emit || (vm == null ? void 0 : vm.emit) || ((_a = vm == null ? void 0 : vm.$emit) == null ? void 0 : _a.bind(vm)) || ((_c = (_b = vm == null ? void 0 : vm.proxy) == null ? void 0 : _b.$emit) == null ? void 0 : _c.bind(vm == null ? void 0 : vm.proxy));
   let event = eventName;
   if (!key) {
-    if (isVue22) {
+    if (isVue2) {
       const modelOptions = (_e = (_d = vm == null ? void 0 : vm.proxy) == null ? void 0 : _d.$options) == null ? void 0 : _e.model;
       key = (modelOptions == null ? void 0 : modelOptions.value) || "value";
       if (!eventName)
@@ -9079,4 +9076,13 @@ export {
   useWindowScroll,
   useWindowSize
 };
-//# sourceMappingURL=chunk-JRDYZRZ2.js.map
+/*! Bundled license information:
+
+vitepress/lib/vue-demi.mjs:
+  (**
+   * vue-demi v0.14.7
+   * Copyright (c) 2020-present, Anthony Fu
+   * @license MIT
+   *)
+*/
+//# sourceMappingURL=chunk-4I4JYJZN.js.map

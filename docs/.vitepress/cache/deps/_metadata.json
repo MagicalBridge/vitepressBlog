@@ -1,40 +1,58 @@
 {
-  "hash": "a95471fc",
-  "configHash": "2d3f0c89",
+  "hash": "6d199a3f",
+  "configHash": "d663dfb7",
   "lockfileHash": "c8a2c5cf",
-  "browserHash": "000b1c4e",
+  "browserHash": "baecb4ae",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "d5284617",
+      "fileHash": "9c45cc6a",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "f39bf7e4",
+      "fileHash": "9b5cd57c",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "61264f8c",
+      "fileHash": "b9dc8078",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/integrations/useFocusTrap": {
+      "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
+      "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
+      "fileHash": "5195e48c",
+      "needsInterop": false
+    },
+    "vitepress > mark.js/src/vanilla.js": {
+      "src": "../../../../node_modules/mark.js/src/vanilla.js",
+      "file": "vitepress___mark__js_src_vanilla__js.js",
+      "fileHash": "d2126c92",
+      "needsInterop": false
+    },
+    "vitepress > minisearch": {
+      "src": "../../../../node_modules/minisearch/dist/es/index.js",
+      "file": "vitepress___minisearch.js",
+      "fileHash": "d4cfa14f",
       "needsInterop": false
     },
     "@theme/index": {
       "src": "../../../../node_modules/vitepress/dist/client/theme-default/index.js",
       "file": "@theme_index.js",
-      "fileHash": "e3b775e9",
+      "fileHash": "936a6cc4",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-JRDYZRZ2": {
-      "file": "chunk-JRDYZRZ2.js"
+    "chunk-4I4JYJZN": {
+      "file": "chunk-4I4JYJZN.js"
     },
-    "chunk-G7P6XGB7": {
-      "file": "chunk-G7P6XGB7.js"
+    "chunk-CKQ4TNQ3": {
+      "file": "chunk-CKQ4TNQ3.js"
     }
   }
 }
