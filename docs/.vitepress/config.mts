@@ -208,6 +208,17 @@ export default defineConfig({
             }
           ]
         },
+        {
+          text:"Webpack",
+          link:"",
+          collapsed: false,
+          items:[
+            {
+              text: "webpack配置的底层逻辑",
+              link: "/front-end-engineering/webpack/webpack-config",
+            }
+          ]
+        }
       ],
       "/writing/": [
         {
