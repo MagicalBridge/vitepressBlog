@@ -30,7 +30,7 @@ export default defineConfig({
       "/": [
         { 
           text: 'LeetCode算法题解', 
-          link: '',
+          link: '/algorithm/index#leetcode题解汇总',
           collapsed: false,
           items:[
             {
@@ -101,7 +101,7 @@ export default defineConfig({
         },
         { 
           text: '牛客网算法题解', 
-          link: '',
+          link: '/algorithm/index#牛客网算法题解汇总',
           collapsed: false,
           // items:[
           //   {

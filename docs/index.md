@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand 
       text: 算法相关
-      link: /algorithm/index
+      link: /algorithm/index#快速检索目录
     - theme: brand 
       text: React相关
       link: /react/index
