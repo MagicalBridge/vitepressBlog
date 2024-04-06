@@ -48,6 +48,10 @@ export default defineConfig({
             {
               text: '5.最长回文子串', 
               link: '/algorithm/leetcode/5.最长回文子串.md',
+            },
+            {
+              text: '101.对称二叉树', 
+              link: '/algorithm/leetcode/101.对称二叉树',
             }
           ]
         },
