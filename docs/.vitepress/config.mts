@@ -72,34 +72,28 @@ export default defineConfig({
         }
       ],
       "/react/":[
-        {
-          text: 'React框架学习',
+        { 
+          text: 'React进阶', 
+          link: '',
           collapsed: false,
-          items: [
-            { 
-              text: 'React进阶', 
-              link: '',
-              collapsed: false,
-              items:[
-                {
-                  text: '认识jsx', 
-                  link: '/react/react-advance/认识jsx',
-                }
-              ]
-            },
-            { 
-              text: 'React Hooks', 
-              link: '',
-              collapsed: false,
-              items:[
-                {
-                  text: 'React组件的通信强化方式', 
-                  link: '/react/react-hooks/React组件的通信强化方式.md',
-                }
-              ]
-            },
+          items:[
+            {
+              text: '认识jsx', 
+              link: '/react/react-advance/认识jsx',
+            }
           ]
-        }
+        },
+        { 
+          text: 'React Hooks', 
+          link: '',
+          collapsed: false,
+          items:[
+            {
+              text: 'React组件的通信强化方式', 
+              link: '/react/react-hooks/React组件的通信强化方式.md',
+            }
+          ]
+        },
       ],
       "/vue3/":[
         { 
