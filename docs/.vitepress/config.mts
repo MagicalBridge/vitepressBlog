@@ -50,6 +50,46 @@ export default defineConfig({
               link: '/algorithm/leetcode/5.最长回文子串.md',
             },
             {
+              text: '7.整数反转', 
+              link: '/algorithm/leetcode/7.整数反转',
+            },
+            {
+              text: '11.盛水最多的容器', 
+              link: '/algorithm/leetcode/11.盛水最多的容器',
+            },
+            {
+              text: '19.删除链表的倒数第N个节点', 
+              link: '/algorithm/leetcode/19.删除链表的倒数第N个节点',
+            },
+            {
+              text: '20.有效括号', 
+              link: '/algorithm/leetcode/20.有效括号',
+            },
+            {
+              text: '21.合并两个有序链表', 
+              link: '/algorithm/leetcode/21.合并两个有序链表',
+            },
+            {
+              text: '26.删除有序数组中的重复项', 
+              link: '/algorithm/leetcode/26.删除有序数组中的重复项',
+            },
+            {
+              text: '46.全排列', 
+              link: '/algorithm/leetcode/46.全排列',
+            },
+            {
+              text: '53.最大子数组和', 
+              link: '/algorithm/leetcode/53.最大子数组和',
+            },
+            {
+              text: '56.合并区间', 
+              link: '/algorithm/leetcode/56.合并区间',
+            },
+            {
+              text: '70.爬楼梯', 
+              link: '/algorithm/leetcode/70.爬楼梯',
+            },
+            {
               text: '101.对称二叉树', 
               link: '/algorithm/leetcode/101.对称二叉树',
             }
