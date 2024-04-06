@@ -24,57 +24,51 @@ export default defineConfig({
     },
     sidebar: {
       "/": [
-        {
-          text: '算法学习',
+        { 
+          text: 'LeetCode算法题解', 
+          link: '',
           collapsed: false,
-          items: [
-            { 
-              text: 'LeetCode算法题解', 
-              link: '',
-              collapsed: false,
-              items:[
-                {
-                  text: '1.两数之和', 
-                  link: '/algorithm/leetcode/1.两数之和.md',
-                },
-                {
-                  text: '2.两数相加', 
-                  link: '/algorithm/leetcode/2.两数相加.md',
-                },
-                {
-                  text: '3.无重复字符的最长子串', 
-                  link: '/algorithm/leetcode/3.无重复字符的最长子串.md',
-                },
-                {
-                  text: '4.寻找两个正序数组的中位数', 
-                  link: '/algorithm/leetcode/4.寻找两个正序数组的中位数.md',
-                },
-                {
-                  text: '5.最长回文子串', 
-                  link: '/algorithm/leetcode/5.最长回文子串.md',
-                }
-              ]
+          items:[
+            {
+              text: '1.两数之和', 
+              link: '/algorithm/leetcode/1.两数之和.md',
             },
-            { 
-              text: '牛客网算法题解', 
-              link: '',
-              collapsed: false,
-              // items:[
-              //   {
-              //     text: '1.两数之和', 
-              //     link: '/algorithm/leetcode/1.两数之和.md',
-              //   },
-              //   {
-              //     text: '3.无重复字符的最长子串', 
-              //     link: '/algorithm/leetcode/3.无重复字符的最长子串.md',
-              //   },
-              //   {
-              //     text: '5.最长回文子串', 
-              //     link: '/algorithm/leetcode/5.最长回文子串.md',
-              //   }
-              // ]
+            {
+              text: '2.两数相加', 
+              link: '/algorithm/leetcode/2.两数相加.md',
+            },
+            {
+              text: '3.无重复字符的最长子串', 
+              link: '/algorithm/leetcode/3.无重复字符的最长子串.md',
+            },
+            {
+              text: '4.寻找两个正序数组的中位数', 
+              link: '/algorithm/leetcode/4.寻找两个正序数组的中位数.md',
+            },
+            {
+              text: '5.最长回文子串', 
+              link: '/algorithm/leetcode/5.最长回文子串.md',
             }
           ]
+        },
+        { 
+          text: '牛客网算法题解', 
+          link: '',
+          collapsed: false,
+          // items:[
+          //   {
+          //     text: '1.两数之和', 
+          //     link: '/algorithm/leetcode/1.两数之和.md',
+          //   },
+          //   {
+          //     text: '3.无重复字符的最长子串', 
+          //     link: '/algorithm/leetcode/3.无重复字符的最长子串.md',
+          //   },
+          //   {
+          //     text: '5.最长回文子串', 
+          //     link: '/algorithm/leetcode/5.最长回文子串.md',
+          //   }
+          // ]
         }
       ],
       "/react/":[
@@ -108,89 +102,72 @@ export default defineConfig({
         }
       ],
       "/vue3/":[
-        {
-          text: 'Vue3框架学习',
+        { 
+          text: 'Vue3框架介绍', 
+          link: '',
           collapsed: false,
-          items: [
-            { 
-              text: 'Vue3框架介绍', 
-              link: '',
-              collapsed: false,
-              items:[
-                {
-                  text: 'Vue3整体架构', 
-                  link: '/vue3/01.introduce',
-                },
-                {
-                  text: 'Vue3开发环境搭建', 
-                  link: '/vue3/02.start',
-                }
-              ]
+          items:[
+            {
+              text: 'Vue3整体架构', 
+              link: '/vue3/01.introduce',
             },
-            { 
-              text: 'Vue3响应式原理', 
-              link: '',
-              collapsed: false,
-              items:[
-                {
-                  text: 'test1', 
-                  link: '/vue3/01.introduce',
-                },
-                {
-                  text: 'test2', 
-                  link: '/vue3/02.start',
-                }
-              ]
-            },
+            {
+              text: 'Vue3开发环境搭建', 
+              link: '/vue3/02.start',
+            }
           ]
-        }
+        },
+        { 
+          text: 'Vue3响应式原理', 
+          link: '',
+          collapsed: false,
+          items:[
+            {
+              text: 'test1', 
+              link: '/vue3/01.introduce',
+            },
+            {
+              text: 'test2', 
+              link: '/vue3/02.start',
+            }
+          ]
+        },
       ],
       "/vue2/":[
         {
-          text: 'Vue2框架学习',
+          text: 'Vue2源码解析',
           collapsed: false,
-          // items: [
-          //   { 
-          //     text: 'React进阶', 
-          //     link: '/react/index',
-          //     collapsed: false,
-          //     items:[
-          //       {
-          //         text: '认识jsx', 
-          //         link: '/react/react-advance/认识jsx.md',
-          //       }
-          //     ]
-          //   },
-          // ]
+          link:"",
+          items: [
+            { 
+              text: '', 
+              link: '',
+              collapsed: false
+            },
+          ]
         }
       ],
       "/node/":[
         {
           text: 'Node.js学习',
           collapsed: false,
+          link:"",
         }
       ],
       "/front-end-engineering/": [
         {
-          text: '前端工程化',
+          text: 'Babel', 
+          link: '/front-end-engineering/babel/index',
           collapsed: false,
-          items: [
-            { 
-              text: 'Babel', 
-              link: '/front-end-engineering/babel/index',
-              collapsed: false,
-              // items:[
-              //   {
-              //     text: '认识jsx', 
-              //     link: '/react/react-advance/认识jsx.md',
-              //   }
-              // ]
-            },
+          items:[
+            {
+              text: 'test', 
+              link: '',
+            }
           ]
-        }
+        },
       ]
     },
-
     socialLinks: [
       { 
         icon: 'github', 
