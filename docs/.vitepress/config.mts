@@ -14,10 +14,14 @@ export default defineConfig({
       // { 
       //   text: '算法题解',
       //   items: [
-      //     { text: 'LeetCode算法题解', link: '/leetcode/leetcode/index.md' },
+      //     { text: '日常写作', link: '/leetcode/leetcode/index.md' },
       //     { text: '牛客算法题解', link: '/leetcode/niuke/index.md' },
       //   ]
       // }
+      { 
+        text: '日常写作', 
+        link: '/writing/index',
+      },
     ],
     search: {
       provider: 'local'
@@ -204,7 +208,14 @@ export default defineConfig({
             }
           ]
         },
-      ]
+      ],
+      "/writing/": [
+        {
+          text: '测试连接', 
+          link: '/writing/test',
+          collapsed: false,
+        },
+      ],
     },
     socialLinks: [
       { 
