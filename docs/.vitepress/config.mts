@@ -234,27 +234,41 @@ export default defineConfig({
 
       "/web3/": [
         {
-          text: '课程概述', 
-          link: '/web3/solidity/课程概述.md',
+          text: 'Solidity入门', 
+          link: '',
           collapsed: false,
+          items: [
+            {
+              text: '第一章：课程概述', 
+              link: '/web3/solidity/课程概述.md',
+              collapsed: false,
+            },
+            {
+              text: '第二章：合约', 
+              link: '/web3/solidity/合约.md',
+              collapsed: false,
+            },
+            {
+              text: '第三章：状态变量和整数', 
+              link: '/web3/solidity/状态变量和整数.md',
+              collapsed: false,
+            },
+            {
+              text: '第四章：数学运算', 
+              link: '/web3/solidity/数学运算.md',
+              collapsed: false,
+            },
+          ]
         },
         {
-          text: '合约', 
-          link: '/web3/solidity/合约.md',
+          text: 'Solidity进阶', 
+          link: '',
           collapsed: false,
-        },
-        {
-          text: '状态变量和整数', 
-          link: '/web3/solidity/状态变量和整数.md',
-          collapsed: false,
-        },
-        {
-          text: '数学运算', 
-          link: '/web3/solidity/数学运算.md',
-          collapsed: false,
-        },
+          items: [
+            
+          ]
+        }
       ],
-
     },
     socialLinks: [
       { 
