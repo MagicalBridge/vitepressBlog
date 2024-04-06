@@ -195,9 +195,19 @@ export default defineConfig({
       ],
       "/node/":[
         {
-          text: 'Node.js学习',
+          text: 'Node.js',
           collapsed: false,
-          link:"",
+          link: "",
+          items: [
+            {
+              text: 'Node基础', 
+              link: '/node/node-base/index',
+            }, 
+            {
+              text: '', 
+              link: '',
+            }
+          ]
         }
       ],
       "/front-end-engineering/": [
