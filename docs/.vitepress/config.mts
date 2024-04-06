@@ -22,6 +22,10 @@ export default defineConfig({
         text: '日常写作', 
         link: '/writing/index',
       },
+      { 
+        text: 'web3', 
+        link: '/web3/index',
+      },
     ],
     search: {
       provider: 'local'
@@ -227,6 +231,30 @@ export default defineConfig({
           collapsed: false,
         },
       ],
+
+      "/web3/": [
+        {
+          text: '课程概述', 
+          link: '/web3/solidity/课程概述.md',
+          collapsed: false,
+        },
+        {
+          text: '合约', 
+          link: '/web3/solidity/合约.md',
+          collapsed: false,
+        },
+        {
+          text: '状态变量和整数', 
+          link: '/web3/solidity/状态变量和整数.md',
+          collapsed: false,
+        },
+        {
+          text: '数学运算', 
+          link: '/web3/solidity/数学运算.md',
+          collapsed: false,
+        },
+      ],
+
     },
     socialLinks: [
       { 
