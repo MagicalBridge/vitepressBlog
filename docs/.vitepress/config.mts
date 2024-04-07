@@ -270,7 +270,27 @@ export default defineConfig({
           collapsed: false,
         },
       ],
-
+      "/back-end/": [
+        {
+          text: "容器化",
+          link: "",
+          collapsed: false,
+          items: [
+            {
+              text: 'Docker',
+              link:"/back-end/docker/index",
+            },
+            {
+              text: 'Dockerfile',
+              link:"/back-end/docker/dockerfile",
+            },
+            {
+              text: 'Docker Compose',
+              link:"/back-end/docker/docker-compose",
+            }
+          ]
+        },
+      ],
       "/web3/": [
         {
           text: "Solidity入门",
