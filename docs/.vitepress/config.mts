@@ -136,6 +136,13 @@ export default defineConfig({
             }
           ]
         },
+        {
+          text: "剑指offer",
+          link: "/algorithm/index",
+          collapsed: false,
+          items:[
+          ]
+        },
       ],
       "/react/": [
         {
@@ -183,12 +190,20 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
-              text: "test1",
-              link: "/vue3/01.introduce",
+              text: "Vue3响应式",
+              link: "/vue3/03.reactivity-1",
             },
             {
-              text: "test2",
-              link: "/vue3/02.start",
+              text: "Reactive & Effect",
+              link: "/vue3/04.reactivity-2",
+            },
+            {
+              text: "Computed & Watch",
+              link: "/vue3/05.reactivity-3",
+            },
+            {
+              text: "Ref实现原理",
+              link: "/vue3/06.ref",
             },
           ],
         },
