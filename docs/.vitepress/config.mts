@@ -31,6 +31,29 @@ export default defineConfig({
     sidebar: {
       "/": [
         {
+          text: "数据结构",
+          link: "",
+          collapsed: false,
+          items:[
+            {
+              text: "数组",
+              link:"/algorithm/data-structure/数组.md"
+            },
+            {
+              text: "栈",
+              link:"/algorithm/data-structure/栈.md"
+            },
+            {
+              text: "队列",
+              link:"/algorithm/data-structure/队列.md"
+            },
+            {
+              text: "链表",
+              link:"/algorithm/data-structure/链表.md"
+            }
+          ]
+        },
+        {
           text: "LeetCode算法题解",
           link: "/algorithm/index#leetcode题解汇总",
           collapsed: false,
@@ -188,7 +211,7 @@ export default defineConfig({
           ],
         },
       ],
-      "/vue3/": [
+      "/vue/": [
         {
           text: "Vue3框架介绍",
           link: "",
@@ -196,11 +219,11 @@ export default defineConfig({
           items: [
             {
               text: "Vue3整体架构",
-              link: "/vue3/01.introduce",
+              link: "/vue/vue3/01.introduce",
             },
             {
               text: "Vue3开发环境搭建",
-              link: "/vue3/02.start",
+              link: "/vue/vue3/02.start",
             },
           ],
         },
@@ -211,19 +234,19 @@ export default defineConfig({
           items: [
             {
               text: "Vue3响应式",
-              link: "/vue3/03.reactivity-1",
+              link: "/vue/vue3/03.reactivity-1",
             },
             {
               text: "Reactive & Effect",
-              link: "/vue3/04.reactivity-2",
+              link: "/vue/vue3/04.reactivity-2",
             },
             {
               text: "Computed & Watch",
-              link: "/vue3/05.reactivity-3",
+              link: "/vue/vue3/05.reactivity-3",
             },
             {
               text: "Ref实现原理",
-              link: "/vue3/06.ref",
+              link: "/vue/vue3/06.ref",
             },
           ],
         },
@@ -253,8 +276,8 @@ export default defineConfig({
               link: "/node/node-base/index",
             },
             {
-              text: "",
-              link: "",
+              text: "Buffer",
+              link: "/node/node-base/buffer",
             },
           ],
         },
@@ -319,6 +342,25 @@ export default defineConfig({
               text: 'linux',
               link:"/back-end/linux/index",
             }
+          ]
+        },
+        {
+          text: "数据库",
+          link: "",
+          collapsed: false,
+          items: [
+            {
+              text: 'Redis',
+              link:"/back-end/database/redis/index",
+            },
+            {
+              text: 'MySQL',
+              link:"/back-end/database/mysql/index",
+            },
+            {
+              text: 'MongoDB',
+              link:"/back-end/database/mongodb/index",
+            },
           ]
         },
       ],
