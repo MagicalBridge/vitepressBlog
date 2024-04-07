@@ -290,6 +290,17 @@ export default defineConfig({
             }
           ]
         },
+        {
+          text: "Linux",
+          link: "",
+          collapsed: false,
+          items: [
+            {
+              text: 'linux',
+              link:"/back-end/linux/index",
+            }
+          ]
+        },
       ],
       "/web3/": [
         {

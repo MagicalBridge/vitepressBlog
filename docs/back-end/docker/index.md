@@ -486,10 +486,3 @@ $docker run --name my-docker-redis -d -p 6978:6379 redis:4.0.6
 ```
 
 这样启动之后，阿里云的安全组需要重新配置，才能生效。
-
-## DockerFile 
-### [Dockerfiles](./Dockerfiles.md)
-
-
-## Docker Compose
-[docker-compose](./docker-compose.md)
