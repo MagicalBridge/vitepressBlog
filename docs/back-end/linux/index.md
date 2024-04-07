@@ -2,7 +2,7 @@
 sidebar: auto
 ---
 
-# Lunix
+# Linux
 
 ## Linux的概述：
 

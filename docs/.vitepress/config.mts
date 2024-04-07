@@ -246,8 +246,8 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
-              text: "test",
-              link: "",
+              text: "Babel简介",
+              link: "/front-end-engineering/babel/01-into",
             },
           ],
         },
