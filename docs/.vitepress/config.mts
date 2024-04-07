@@ -64,6 +64,10 @@ export default defineConfig({
               link: "/algorithm/leetcode/11.盛水最多的容器",
             },
             {
+              text: "14.最长公共前缀",
+              link: "/algorithm/leetcode/14.最长公共前缀",
+            },
+            {
               text: "19.删除链表的倒数第N个节点",
               link: "/algorithm/leetcode/19.删除链表的倒数第N个节点",
             },
@@ -115,8 +119,16 @@ export default defineConfig({
           collapsed: false,
           items:[
             {
+              text: 'NC4.判断链表中是否有环',
+              link: '/algorithm/niuke/NC4.判断链表中是否有环',
+            },
+            {
+              text: 'NC13.二叉树的最大深度',
+              link: '/algorithm/niuke/NC13.二叉树的最大深度',
+            },
+            {
               text: 'NC37.合并区间',
-              link: '/algorithm/niuke/NC37.合并区间.md',
+              link: '/algorithm/niuke/NC37.合并区间',
             },
             {
               text: 'NC41.最长无重复子数组',
@@ -128,7 +140,15 @@ export default defineConfig({
             },
             {
               text: 'NC65.斐波那契数列',
-              link: '/algorithm/niuke/NC65.斐波那契数列.md',
+              link: '/algorithm/niuke/NC65.斐波那契数列',
+            },
+            {
+              text: 'NC140.排序',
+              link: '/algorithm/niuke/NC140.排序',
+            },
+            {
+              text: 'NC141.判断是否为回文字符串',
+              link: '/algorithm/niuke/NC141.判断是否为回文字符串',
             },
             {
               text: 'NC289.删除链表的节点',
