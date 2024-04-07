@@ -88,6 +88,10 @@ export default defineConfig({
               link: "/algorithm/leetcode/53.最大子数组和",
             },
             {
+              text: "54.螺旋矩阵",
+              link: "/algorithm/leetcode/54.螺旋矩阵",
+            },
+            {
               text: "56.合并区间",
               link: "/algorithm/leetcode/56.合并区间",
             },
@@ -109,20 +113,28 @@ export default defineConfig({
           text: "牛客网算法题解",
           link: "/algorithm/index#牛客网算法题解汇总",
           collapsed: false,
-          // items:[
-          //   {
-          //     text: '1.两数之和',
-          //     link: '/algorithm/leetcode/1.两数之和.md',
-          //   },
-          //   {
-          //     text: '3.无重复字符的最长子串',
-          //     link: '/algorithm/leetcode/3.无重复字符的最长子串.md',
-          //   },
-          //   {
-          //     text: '5.最长回文子串',
-          //     link: '/algorithm/leetcode/5.最长回文子串.md',
-          //   }
-          // ]
+          items:[
+            {
+              text: 'NC37.合并区间',
+              link: '/algorithm/niuke/NC37.合并区间.md',
+            },
+            {
+              text: 'NC41.最长无重复子数组',
+              link: '/algorithm/niuke/NC41.最长无重复子数组',
+            },
+            {
+              text: 'NC57.反转数字',
+              link: '/algorithm/niuke/NC57.反转数字',
+            },
+            {
+              text: 'NC65.斐波那契数列',
+              link: '/algorithm/niuke/NC65.斐波那契数列.md',
+            },
+            {
+              text: 'NC289.删除链表的节点',
+              link: '/algorithm/niuke/NC289.删除链表的节点',
+            }
+          ]
         },
       ],
       "/react/": [
