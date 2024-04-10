@@ -131,6 +131,10 @@ export default defineConfig({
               link: "/algorithm/leetcode/101.对称二叉树",
             },
             {
+              text: "102.二叉树的层序遍历",
+              link: "/algorithm/leetcode/102.二叉树的层序遍历",
+            },
+            {
               text: "104.二叉树的最大深度",
               link: "/algorithm/leetcode/104.二叉树的最大深度",
             },
