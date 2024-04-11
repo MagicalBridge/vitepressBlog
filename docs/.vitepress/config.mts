@@ -138,6 +138,10 @@ export default defineConfig({
               text: "104.二叉树的最大深度",
               link: "/algorithm/leetcode/104.二叉树的最大深度",
             },
+            {
+              text: "144.二叉树的前序遍历",
+              link: "/algorithm/leetcode/144.二叉树的前序遍历",
+            },
           ],
         },
         {
