@@ -142,6 +142,10 @@ export default defineConfig({
               text: "144.二叉树的前序遍历",
               link: "/algorithm/leetcode/144.二叉树的前序遍历",
             },
+            {
+              text: "199.二叉树的右视图",
+              link: "/algorithm/leetcode/199.二叉树的右视图",
+            },
           ],
         },
         {
