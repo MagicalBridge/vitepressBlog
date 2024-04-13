@@ -262,6 +262,58 @@ export default defineConfig({
             },
           ],
         },
+        {
+          text: "Vue3渲染原理",
+          link: "",
+          collapsed: false,
+          items: [
+            {
+              text: "Vue3自定义渲染器",
+              link: "/vue/vue3/03.reactivity-1",
+            },
+            {
+              text: "Runtime DOM",
+              link: "/vue/vue3/04.reactivity-2",
+            },
+            {
+              text: "Runtime Core",
+              link: "/vue/vue3/05.reactivity-3",
+            }
+          ],
+        },
+        {
+          text: "Vue3 Diff 算法",
+          link: "",
+          collapsed: false,
+          items: [
+            {
+              text: "Diff流程",
+              link: "/vue/vue3/03.reactivity-1",
+            }
+          ],
+        },
+        {
+          text: "组件渲染原理",
+          link: "",
+          collapsed: false,
+          items: [
+            {
+              text: "Diff流程",
+              link: "/vue/vue3/03.reactivity-1",
+            }
+          ],
+        },
+        {
+          text: "模板编译原理",
+          link: "",
+          collapsed: false,
+          items: [
+            {
+              text: "Diff流程",
+              link: "/vue/vue3/03.reactivity-1",
+            }
+          ],
+        },
       ],
       "/vue2/": [
         {
