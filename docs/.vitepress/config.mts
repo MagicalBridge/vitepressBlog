@@ -463,6 +463,35 @@ export default defineConfig({
           items: [],
         },
       ],
+      "/low-code/": [
+        {
+          text: "从0打造通用型低代码产品",
+          link: "",
+          collapsed: false,
+          items: [
+            {
+              text: "序章：前端的价值",
+              link: "/low-code/01-前端的价值",
+              collapsed: false,
+            },
+            {
+              text: "前言：什么是低代码",
+              link: "/low-code/02-什么是低代码",
+              collapsed: false,
+            },
+            {
+              text: "第三章：状态变量和整数",
+              link: "/web3/solidity/状态变量和整数.md",
+              collapsed: false,
+            },
+            {
+              text: "第四章：数学运算",
+              link: "/web3/solidity/数学运算.md",
+              collapsed: false,
+            },
+          ],
+        }
+      ],
     },
     socialLinks: [
       {
