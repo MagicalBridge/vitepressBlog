@@ -269,15 +269,15 @@ export default defineConfig({
           items: [
             {
               text: "Vue3自定义渲染器",
-              link: "/vue/vue3/03.reactivity-1",
+              link: "/vue/vue3/07.renderer",
             },
             {
               text: "Runtime DOM",
-              link: "/vue/vue3/04.reactivity-2",
+              link: "/vue/vue3/08.runtime-dom",
             },
             {
               text: "Runtime Core",
-              link: "/vue/vue3/05.reactivity-3",
+              link: "/vue/vue3/09.runtime-core",
             }
           ],
         },
