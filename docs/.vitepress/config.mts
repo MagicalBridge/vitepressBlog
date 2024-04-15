@@ -318,7 +318,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
-              text: "Diff流程",
+              text: "编译优化",
               link: "/vue/vue3/03.reactivity-1",
             }
           ],
@@ -375,6 +375,21 @@ export default defineConfig({
             {
               text: "webpack配置的底层逻辑",
               link: "/front-end-engineering/webpack/webpack-config",
+            },
+          ],
+        },
+        {
+          text: "微前端",
+          link: "",
+          collapsed: false,
+          items: [
+            {
+              text: "微前端基本概念",
+              link: "/front-end-engineering/micro-frontend/01.基础概念",
+            },
+            {
+              text: "原理实现",
+              link: "/front-end-engineering/micro-frontend/02.原理实现",
             },
           ],
         },
