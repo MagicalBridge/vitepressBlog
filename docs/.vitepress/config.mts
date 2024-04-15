@@ -504,8 +504,8 @@ export default defineConfig({
               collapsed: false,
             },
             {
-              text: "第三章：状态变量和整数",
-              link: "/web3/solidity/状态变量和整数.md",
+              text: "MRD：产品目标与设计",
+              link: "/low-code/03-产品的目标与设计",
               collapsed: false,
             },
             {
