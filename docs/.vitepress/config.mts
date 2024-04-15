@@ -278,7 +278,8 @@ export default defineConfig({
             {
               text: "Runtime Core",
               link: "/vue/vue3/09.runtime-core",
-            }
+            },
+            
           ],
         },
         {
@@ -288,7 +289,7 @@ export default defineConfig({
           items: [
             {
               text: "Diff流程",
-              link: "/vue/vue3/03.reactivity-1",
+              link: "/vue/vue3/10.diff",
             }
           ],
         },
