@@ -501,6 +501,19 @@ export default defineConfig({
           ],
         }
       ],
+      "/js-base/": [
+        {
+          text: "JavaScript基础",
+          link: "",
+          collapsed: false,
+          items:[
+            {
+              text: "高阶函数",
+              link: "/js-base/01-高阶函数"
+            }
+          ]
+        },
+      ]
     },
     socialLinks: [
       {

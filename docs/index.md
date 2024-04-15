@@ -11,6 +11,9 @@ hero:
       text: 数据结构&算法
       link: /algorithm/index#快速检索目录
     - theme: brand 
+      text: js基础
+      link: /js-base/index
+    - theme: brand 
       text: React相关
       link: /react/index
     - theme: brand 
