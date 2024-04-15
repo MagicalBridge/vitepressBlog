@@ -299,8 +299,16 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
-              text: "Diff流程",
-              link: "/vue/vue3/03.reactivity-1",
+              text: "text、Fragment",
+              link: "/vue/vue3/11.fragment",
+            },
+            {
+              text: "组件渲染",
+              link: "/vue/vue3/12.component",
+            },
+            {
+              text: "setup函数",
+              link: "/vue/vue3/13.compositionApi",
             }
           ],
         },
