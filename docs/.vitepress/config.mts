@@ -323,18 +323,15 @@ export default defineConfig({
             }
           ],
         },
-      ],
-      "/vue2/": [
         {
-          text: "Vue2源码解析",
-          collapsed: false,
+          text: "Vue2核心原理",
           link: "",
+          collapsed: false,
           items: [
             {
-              text: "",
-              link: "",
-              collapsed: false,
-            },
+              text: "Vue2初渲染原理",
+              link: "/vue/vue2/01.source",
+            }
           ],
         },
       ],
