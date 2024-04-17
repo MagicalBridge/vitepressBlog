@@ -331,6 +331,10 @@ export default defineConfig({
             {
               text: "Vue2初渲染原理",
               link: "/vue/vue2/01.source",
+            },
+            {
+              text: "创建渲染Watcher",
+              link: "/vue/vue2/02.渲染watcher",
             }
           ],
         },
