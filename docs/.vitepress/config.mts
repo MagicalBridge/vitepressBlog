@@ -319,8 +319,20 @@ export default defineConfig({
           items: [
             {
               text: "编译优化",
-              link: "/vue/vue3/03.reactivity-1",
-            }
+              link: "/vue/vue3/14.optimize",
+            },
+            {
+              text: "模板转化为AST",
+              link: "/vue/vue3/15.ast",
+            },
+            {
+              text: "代码转化",
+              link: "/vue/vue3/16.transform",
+            },
+            {
+              text: "代码生成",
+              link: "/vue/vue3/17.codegen",
+            },
           ],
         },
         {
