@@ -538,9 +538,20 @@ export default defineConfig({
             {
               text: "高阶函数",
               link: "/js-base/01-高阶函数"
-            }
+            },
           ]
         },
+        {
+          text: "JavaScript异步",
+          link: "",
+          collapsed: false,
+          items:[
+            {
+              text: "Promise.all",
+              link: "/js-base/promise.all"
+            },
+          ]
+        }
       ]
     },
     socialLinks: [
