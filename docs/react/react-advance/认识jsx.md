@@ -70,18 +70,18 @@ React.createElement(
 
 ```jsx
 <div>
-   <TextComponent />
-   <div>hello,world</div>
-   let us learn React!
+  <TextComponent />
+  <div>hello,world</div>
+  let us learn React!
 </div>
 ```
 
-上面的代码会被 babel 先编译成：
+上面的代码会被`babel`先编译成：
 ```js
 React.createElement("div", null,
-    React.createElement(TextComponent, null),
-    React.createElement("div", null, "hello,world"),
-    "let us learn React!"
+  React.createElement(TextComponent, null),
+  React.createElement("div", null, "hello,world"),
+  "let us learn React!"
 )
 ```
 
@@ -91,11 +91,13 @@ React.createElement("div", null,
 
 ```jsx
 import React from 'react'
+
 function Index(){
-    return <div>hello,world</div>
+  return <div>hello,world</div>
 }
 ```
-答：因为 jsx 在被 babel 编译后，写的 jsx 会变成上述 React.createElement 形式，所以需要引入 React，防止找不到 React 引起报错。
+
+答：因为`jsx`在被`babel`编译后，写的`jsx`会变成上述 React.createElement 形式，所以需要引入 React，防止找不到 React 引起报错。
 
 ### 2、createElement 处理后的样子
 
@@ -162,6 +164,86 @@ fiber 对应关系
 > - map 返回数组结构，作为 fragment 的子节点。
 
 ## 进阶实践-可控性 render
+
+上面的 demo 暴露出了如下问题：
+
+- 1、返回的 children 虽然是一个数组，但是数组里面的数据类型却是不确定的，有对象类型( 如ReactElement ) ，有数组类型(如 map 遍历返回的子节点)，还有字符串类型(如文本)；
+- 2、无法对 render 后的 React element 元素进行可控性操作。
+
+针对上述问题，我们需要对demo项目进行改造处理，具体过程可以分为4步：
+
+- 1、将上述children扁平化处理，将数组类型的子节点打开 ；
+- 2、干掉children中文本类型节点；
+- 3、向children最后插入 say goodbye 元素；
+- 4、克隆新的元素节点并渲染。
+
+
+希望通过这个实践 demo ，大家可以加深对 jsx 编译后结构的认识，学会对 jsx 编译后的 React.element 进行一系列操作，达到理想化的目的，以及熟悉 React API 的使用。
+
+由于，我们想要把 render 过程变成可控的，因此需要把上述代码进行改造。
+
+```js
+class Index extends React.Component{
+  status = false /* 状态 */
+  
+  renderFoot=()=> <div> i am foot</div>
+  /* 控制渲染 */
+  controlRender = () => {
+    const reactElement = (
+      <div style={{ marginTop:'100px' }} className="container">   
+        { /* element 元素类型 */ }
+        <div>hello,world</div>  
+        
+        { /* fragment 类型 */ }
+        <React.Fragment>      
+            <div> 👽👽 </div>
+        </React.Fragment>
+        
+        { /* text 文本类型 */ }
+        my name is alien       
+        
+        { /* 数组节点类型 */ }
+        { toLearn.map(item=> <div key={item} >let us learn { item } </div> ) } 
+        
+        { /* 组件类型 */ }
+        <TextComponent/>  
+        
+        { /* 三元运算 */  }
+        { this.status ? <TextComponent /> :  <div>三元运算</div> }  
+        
+        { /* 函数执行 */ } 
+        { this.renderFoot() }  
+        <button onClick={ ()=> console.log( this.render() ) } >打印render后的内容</button>
+      </div>
+    )
+      console.log(reactElement)
+      
+      const { children } = reactElement.props
+      
+      /* 第1步 ： 扁平化 children  */
+      const flatChildren = React.Children.toArray(children)
+      console.log(flatChildren)
+      
+      /* 第2步 ： 除去文本节点 */
+      const newChildren:any = []
+      React.Children.forEach(flatChildren,(item)=>{
+        if(React.isValidElement(item)) newChildren.push(item)
+      })
+
+      /* 第3步，插入新的节点 */
+      const lastChildren = React.createElement(`div`,{ className :'last' } ,`say goodbye`)
+      newChildren.push(lastChildren)
+      
+      /* 第4步：修改容器节点 */
+      const newReactElement = React.cloneElement(reactElement,{} ,...newChildren )
+      return newReactElement
+    }
+
+    render(){
+      return this.controlRender()
+    }
+}
+```
 
 
 
