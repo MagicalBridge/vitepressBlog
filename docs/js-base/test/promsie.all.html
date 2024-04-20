@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    Promsie.all = function (promises) {
+      // 返回的是一个新的promsie
+      return new Promise((resolve, reject) => {
+        // 需要一个数组按照顺序存储结果
+        let result = [];
+        // 一个计数器
+        let times = 0;
+
+        // 需要封装一个方法处理成功的逻辑
+        const processSuccess = (index, value) => {
+          // 创建一个映射关系，存储在数组中
+          result[index] = value;
+          if (++ times === promises.length) {
+            resolve(result)
+          }
+        }
+
+        // 并发执行异步任务 
+        for (let index = 0; index < promises.length; index++) {
+          // 拿到每一个promise执行
+          const p = promises[index];
+          
+          // 因为传递的参数不一定是promsie，所以需要做逻辑分流
+          // 这里只做一个简单的判断
+          if (p && typeof p.then === "function") {
+            // 执行这个promsie，拿到它的执行结果，then是个异步方法
+            p.then((data) => {
+              processSuccess(i, data)
+            }, reject)
+          } else {
+            processSuccess(i, p)
+          }
+        }
+      })
+    }
+  </script>
+</body>
+
+</html>

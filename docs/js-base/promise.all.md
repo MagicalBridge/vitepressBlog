@@ -113,35 +113,35 @@ Promise.all([1,2,3,
 我们尝试自己手写一版：
 
 ```js
-Promise.all = function(promises) {
-  // 返回的是一个promsie
+Promsie.all = function (promises) {
+  // 返回的是一个新的promsie
   return new Promise((resolve, reject) => {
-    let result = []; // 顺序存储结果
-
+    // 需要一个数组按照顺序存储结果
+    let result = [];
     // 一个计数器
-    let times = 0
+    let times = 0;
 
     // 需要封装一个方法处理成功的逻辑
-    const processSuccess = (index,value) => {
-      // 创建映射关系，存放进数组中
-      result[index] = value
-      if (++times === promises.length) {
+    const processSuccess = (index, value) => {
+      // 创建一个映射关系，存储在数组中
+      result[index] = value;
+      if (++ times === promises.length) {
         resolve(result)
       }
     }
 
-    // 并发执行异步任务
-    for (let i = 0; i < promises.lenght; i++) {
-      // 拿到每一个执行
-      let p = promises[i]
-      // 因为传递的参数不一定是哦promsie，所以需要进行类型判断
-      // p存在，并且有then方法
+    // 并发执行异步任务 
+    for (let index = 0; index < promises.length; index++) {
+      // 拿到每一个promise执行
+      const p = promises[index];
+      
+      // 因为传递的参数不一定是promsie，所以需要做逻辑分流
+      // 这里只做一个简单的判断
       if (p && typeof p.then === "function") {
-        // 执行这个promise 拿到它的执行结果 then 是个异步方法
-        // 走入then 方法的时候 for循环已经执行完毕了
+        // 执行这个promsie，拿到它的执行结果，then是个异步方法
         p.then((data) => {
           processSuccess(i, data)
-        },reject); // 其中任何一个promise失败了直接执行reject即可
+        }, reject)
       } else {
         processSuccess(i, p)
       }
