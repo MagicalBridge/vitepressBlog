@@ -537,7 +537,7 @@ export default defineConfig({
           items:[
             {
               text: "高阶函数",
-              link: "/js-base/01-高阶函数"
+              link: "/js-base/高阶函数"
             },
           ]
         },
@@ -549,6 +549,10 @@ export default defineConfig({
             {
               text: "Promise.all",
               link: "/js-base/promise.all"
+            },
+            {
+              text: "Promise.race",
+              link: "/js-base/promise.race"
             },
           ]
         }
