@@ -467,6 +467,18 @@ export default defineConfig({
       ],
       "/web3/": [
         {
+          text: "第0章: blockchain基础知识",
+          link: "",
+          collapsed: true,
+          items: [
+            {
+              text: "第1节：什么是区块链",
+              link: "/web3/blockchain-base-info/01-什么是区块链.md",
+              collapsed: false,
+            },
+          ],
+        },
+        {
           text: "Solidity入门",
           link: "",
           collapsed: false,
