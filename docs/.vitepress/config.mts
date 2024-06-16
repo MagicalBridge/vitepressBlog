@@ -60,7 +60,7 @@ export default defineConfig({
           items: [
             {
               text: "1.两数之和",
-              link: "/algorithm/leetcode/1.两数之和.md",
+              link: "/algorithm/leetcode/1.Two Sum.md",
             },
             {
               text: "2.两数相加",
