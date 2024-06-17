@@ -469,7 +469,7 @@ export default defineConfig({
         {
           text: "第0章: blockchain基础知识",
           link: "",
-          collapsed: true,
+          collapsed: false,
           items: [
             {
               text: "第1节：什么是区块链",
@@ -479,34 +479,35 @@ export default defineConfig({
           ],
         },
         {
-          text: "Solidity入门",
+          text: "第1章：Solidity基础",
           link: "",
           collapsed: false,
           items: [
             {
-              text: "第一章：课程概述",
-              link: "/web3/solidity/课程概述.md",
+              text: "第1节：Hello Web3",
+              link: "/web3/solidity-base/01-hellweb3.md",
               collapsed: false,
             },
-            {
-              text: "第二章：合约",
-              link: "/web3/solidity/合约.md",
-              collapsed: false,
-            },
-            {
-              text: "第三章：状态变量和整数",
-              link: "/web3/solidity/状态变量和整数.md",
-              collapsed: false,
-            },
-            {
-              text: "第四章：数学运算",
-              link: "/web3/solidity/数学运算.md",
-              collapsed: false,
-            },
+            // {
+            //   text: "第二章：合约",
+            //   link: "/web3/solidity/合约.md",
+            //   collapsed: false,
+            // },
+            // {
+            //   text: "第三章：状态变量和整数",
+            //   link: "/web3/solidity/状态变量和整数.md",
+            //   collapsed: false,
+            // },
+            // {
+            //   text: "第四章：数学运算",
+            //   link: "/web3/solidity/数学运算.md",
+            //   collapsed: false,
+            // },
           ],
         },
+
         {
-          text: "Solidity进阶",
+          text: "第2章：Solidity进阶",
           link: "",
           collapsed: false,
           items: [],
