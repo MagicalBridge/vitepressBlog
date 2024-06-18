@@ -464,6 +464,17 @@ export default defineConfig({
             },
           ]
         },
+        {
+          text: "Rust",
+          link: "",
+          collapsed: false,
+          items: [
+            {
+              text: '第1节：hellowrold',
+              link:"/back-end/rust/01-helloworld",
+            }
+          ]
+        },
       ],
       "/web3/": [
         {
