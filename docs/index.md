@@ -11,6 +11,9 @@ hero:
       text: 数据结构&算法
       link: /algorithm/index#快速检索目录
     - theme: brand 
+      text: uniswap-v3-book
+      link: /uniswap-v3-book/index
+    - theme: brand 
       text: js基础
       link: /js-base/index
     - theme: brand 

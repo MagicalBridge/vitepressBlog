@@ -199,6 +199,19 @@ export default defineConfig({
           ]
         },
       ],
+      "/uniswap-v3-book/":[
+        {
+          text: "React进阶",
+          link: "",
+          collapsed: false,
+          items: [
+            {
+              text: "认识jsx",
+              link: "/react/react-advance/认识jsx",
+            },
+          ],
+        },
+      ],
       "/react/": [
         {
           text: "React进阶",
