@@ -196,6 +196,10 @@ export default defineConfig({
           link: "/algorithm/index",
           collapsed: false,
           items:[
+            {
+              text: '剑指Offer03.数组中重复的数字',
+              link: '/algorithm/offer/03.数组中重复的数字',
+            },
           ]
         },
       ],
