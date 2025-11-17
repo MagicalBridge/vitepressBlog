@@ -1,70 +1,161 @@
 # MyvitepressBlog
 
-Welcome to MyvitepressBlog, a personal blog project built using Vitepress.
+一个基于 VitePress 构建的个人技术博客，专注于分享前后端开发、算法、Web3 等技术知识。
 
-## Project Overview
-MyvitepressBlog is designed to provide a comprehensive platform for sharing knowledge and insights on various topics, including back-end technologies, front-end engineering, algorithms, and more.
+## 📖 项目简介
 
-## Key Features
-- Organized content structure with categories such as Docker, Node.js, and more.
-- Easy navigation and search functionality.
-- Responsive design for optimal viewing on different devices.
+这是一个全面的技术学习与分享平台，涵盖算法与数据结构、前后端开发、Web3、工程化等多个技术领域。博客以"定投改变命运"为理念，强调持续学习与积累的重要性。
 
-## Tech Stack
-- **Vitepress**: A modern static site generator.
-- **Markdown**: For writing and formatting content.
-- **Docker**: Used for containerization and deployment.
+## ✨ 主要特性
 
-## Installation and Running
-To set up the project locally, follow these steps:
+- 📚 **内容丰富**：涵盖算法、数据结构、LeetCode、前端框架、后端技术、Web3 等多个领域
+- 🔍 **易于导航**：清晰的分类结构和搜索功能
+- 📱 **响应式设计**：适配各种设备，提供良好的阅读体验
+- ⚡ **快速构建**：基于 VitePress，构建速度快，开发体验好
+- 🎨 **现代化 UI**：简洁美观的界面设计
 
-1. Clone the repository:
+## 🛠️ 技术栈
+
+- **VitePress**: ^1.6.2 - 现代化的静态站点生成器
+- **Markdown**: 内容编写和格式化
+- **pnpm**: 包管理器
+
+## 📁 内容分类
+
+### 算法与数据结构
+- 数据结构：数组、链表、栈、队列、树等
+- LeetCode 题解：包含 50+ 道经典算法题
+- 牛客网题解
+- 剑指 Offer 题解（含 Go 语言实现）
+
+### 后端技术
+- **数据库**：MySQL、MongoDB、Redis
+- **容器化**：Docker、Docker Compose
+- **系统**：Linux 相关
+- **语言**：Rust 入门与实践
+
+### 前端技术
+- **框架**：React（Hooks、高级特性）、Vue2/Vue3
+- **工程化**：Webpack、Babel、微前端
+- **基础**：JavaScript 基础、Promise、高阶函数
+
+### Web3
+- 区块链基础知识
+- Solidity 智能合约开发
+- Uniswap V3 相关
+
+### Node.js
+- Node.js 基础
+- Buffer 等核心模块
+
+## 🚀 快速开始
+
+### 环境要求
+
+- Node.js >= 14.x
+- pnpm >= 7.x（推荐）或 npm
+
+### 安装步骤
+
+1. **克隆仓库**
    ```bash
    git clone https://github.com/yourusername/MyvitepressBlog.git
    ```
 
-2. Navigate to the project directory:
+2. **进入项目目录**
    ```bash
    cd MyvitepressBlog
    ```
 
-3. Install dependencies:
+3. **安装依赖**
    ```bash
+   # 使用 pnpm（推荐）
+   pnpm install
+   
+   # 或使用 npm
    npm install
    ```
 
-4. Run the development server:
+4. **启动开发服务器**
    ```bash
-   npm run dev
+   # 使用 pnpm
+   pnpm start
+   
+   # 或使用 npm
+   npm start
+   ```
+   
+   开发服务器将在 `http://localhost:5173` 启动
+
+5. **构建生产版本**
+   ```bash
+   pnpm build
    ```
 
-## Directory Structure
+6. **预览生产构建**
+   ```bash
+   pnpm preview
+   ```
+
+## 📂 项目结构
+
 ```
-.github/
-  workflows/
-    deploy.yml
-.gitignore
-...
-docs/
-  back-end/
-    docker/
-    node/
-  front-end-engineering/
-  images/
-  js-base/
-  low-code/
-  react/
-  vue/
-  web3/
-  writing/
-package-lock.json
-package.json
+vitepressBlog/
+├── docs/                    # 文档目录
+│   ├── algorithm/          # 算法与数据结构
+│   │   ├── data-structure/ # 数据结构
+│   │   ├── leetcode/       # LeetCode 题解
+│   │   ├── niuke/          # 牛客网题解
+│   │   └── offer/          # 剑指 Offer 题解
+│   ├── back-end/           # 后端技术
+│   │   ├── database/       # 数据库相关
+│   │   ├── docker/         # Docker 相关
+│   │   ├── linux/          # Linux 相关
+│   │   └── rust/           # Rust 相关
+│   ├── front-end-engineering/ # 前端工程化
+│   │   ├── babel/          # Babel 相关
+│   │   ├── micro-frontend/ # 微前端
+│   │   └── webpack/        # Webpack 相关
+│   ├── js-base/            # JavaScript 基础
+│   ├── react/              # React 相关
+│   ├── vue/                # Vue 相关
+│   ├── node/               # Node.js 相关
+│   ├── web3/               # Web3 相关
+│   ├── uniswap-v3-book/    # Uniswap V3 书籍
+│   ├── writing/            # 写作相关
+│   ├── images/             # 图片资源
+│   └── index.md            # 首页配置
+├── package.json            # 项目配置
+├── pnpm-lock.yaml         # pnpm 锁文件
+└── README.md              # 项目说明
 ```
 
-## Contribution Guidelines
-We welcome contributions from the community. Please follow these steps:
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Submit a pull request with a clear description of your changes.
+## 📝 可用脚本
 
-Thank you for visiting MyvitepressBlog! Feel free to explore and contribute.
+- `pnpm start` 或 `npm start` - 启动开发服务器
+- `pnpm build` 或 `npm run build` - 构建生产版本
+- `pnpm preview` 或 `npm run preview` - 预览生产构建
+
+## 🤝 贡献指南
+
+欢迎贡献！如果你有任何想法或发现任何问题，请：
+
+1. Fork 本仓库
+2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交你的更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 开启一个 Pull Request
+
+## 📄 许可证
+
+本项目采用 MIT 许可证。
+
+## 🙏 致谢
+
+感谢所有为本项目做出贡献的开发者！
+
+---
+
+**持续努力的能力，才是真正的才华** - 羽生善治
+
+感谢访问 MyvitepressBlog！欢迎探索和贡献。
