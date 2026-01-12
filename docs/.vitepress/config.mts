@@ -17,8 +17,8 @@ export default defineConfig({
       //   ]
       // }
       {
-        text: "日常写作",
-        link: "/writing/index",
+        text: "AI",
+        link: "/ai/index",
       },
       {
         text: "web3",
@@ -424,11 +424,17 @@ export default defineConfig({
           ],
         },
       ],
-      "/writing/": [
+      "/ai/": [
         {
-          text: "测试连接",
-          link: "/writing/test",
+          text: "AI",
+          link: "",
           collapsed: false,
+          items: [
+            {
+              text: 'agent基本概念',
+              link:"/ai/agent/01.agent的基本概念",
+            },
+          ]
         },
       ],
       "/back-end/": [

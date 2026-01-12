@@ -1,6 +1,6 @@
 # MyvitepressBlog
 
-一个基于 VitePress 构建的个人技术博客，专注于分享前后端开发、算法、Web3 等技术知识。
+一个基于 VitePress 构建的个人技术博客，专注于分享前后端开发、算法、Web3、AI等技术知识。
 
 ## 📖 项目简介
 
