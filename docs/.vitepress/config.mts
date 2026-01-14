@@ -501,7 +501,7 @@ export default defineConfig({
       ],
       "/web3/": [
         {
-          text: "第0章: blockchain基础知识",
+          text: "blockchain基础知识",
           link: "",
           collapsed: false,
           items: [
@@ -513,7 +513,7 @@ export default defineConfig({
           ],
         },
         {
-          text: "第1章：Solidity基础",
+          text: "Solidity基础",
           link: "",
           collapsed: false,
           items: [
@@ -541,10 +541,22 @@ export default defineConfig({
         },
 
         {
-          text: "第2章：Solidity进阶",
+          text: "Solidity进阶",
           link: "",
           collapsed: false,
           items: [],
+        },
+        {
+          text: "Uniswapv4",
+          link: "",
+          collapsed: false,
+          items: [
+            {
+              text: "第1节：Hello Uniswapv4",
+              link: "/web3/uniswapv4/01.基本介绍.md",
+              collapsed: false,
+            },
+          ],
         },
       ],
       "/low-code/": [
