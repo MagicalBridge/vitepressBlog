@@ -434,6 +434,10 @@ export default defineConfig({
               text: 'agent基本概念',
               link:"/ai/agent/01.agent的基本概念",
             },
+            {
+              text: 'agent核心组件',
+              link:"/ai/agent/02.agent的核心组件",
+            },
           ]
         },
       ],
