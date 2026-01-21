@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.K2WCgrB4.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{"sidebar":"auto"},"headers":[],"relativePath":"web3/index.md","filePath":"web3/index.md"}'),n={name:"web3/index.md"};function r(o,s,c,d,i,p){return a(),t("div")}const f=e(n,[["render",r]]);export{m as __pageData,f as default};

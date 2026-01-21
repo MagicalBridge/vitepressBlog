@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.K2WCgrB4.js";const p=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"algorithm/leetcode/index.md","filePath":"algorithm/leetcode/index.md"}'),o={name:"algorithm/leetcode/index.md"};function r(n,c,d,i,s,l){return a(),t("div")}const _=e(o,[["render",r]]);export{p as __pageData,_ as default};

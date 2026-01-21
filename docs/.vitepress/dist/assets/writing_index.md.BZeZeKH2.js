@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as n}from"./chunks/framework.K2WCgrB4.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"writing/index.md","filePath":"writing/index.md"}'),r={name:"writing/index.md"};function a(i,o,s,c,d,p){return n(),t("div")}const f=e(r,[["render",a]]);export{m as __pageData,f as default};
